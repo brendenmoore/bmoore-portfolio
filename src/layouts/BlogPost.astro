@@ -10,11 +10,12 @@ export interface Props {
 		pubDate?: string;
 		updatedDate?: string;
 		heroImage?: string;
+		technologies?: string[]
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, pubDate, updatedDate, heroImage, technologies },
 } = Astro.props as Props;
 ---
 
@@ -48,6 +49,7 @@ const {
 				<h1 class="title">{title}</h1>
 				{pubDate && <time>{pubDate}</time>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+				{technologies?.map(technology => <li>{technology}</li>)}
 				<hr/>
 				<slot />
 			</article>

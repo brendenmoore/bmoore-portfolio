@@ -5,6 +5,6 @@ const { href, class: className, ...props } = Astro.props as Props;
 const isActive = href === Astro.url.pathname;
 ---
 
-<a href={href} class:list={[className, "inline-block", { 'font-bold underline': isActive }]} {...props}>
+<a href={href} class:list={[className, "inline-block uppercase", { 'font-bold underline': isActive }]} {...props}>
 	<slot />
 </a>
