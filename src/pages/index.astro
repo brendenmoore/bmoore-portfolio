@@ -7,36 +7,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main class="prose min-h-full">
-			<!-- <h1>Welcome!</h1> -->
-			<h3>
-				Hi! I'm Brenden, a fullstack web developer.
-			</h3>
-			<p>
-				I love creating websites and playing with the latest web frameworks and libraries.
-			</p>
-			<p>Here are some of my favorites technologies:</p>
-			<ul>
-				<li>Typescript</li>
-				<li>React</li>
-				<li>TailwindCSS</li>
-				<li>NextJS</li>
-				<li>Astro</li>
-				<li>React-Query</li>
-			</ul>
-			<p>Here are some cool things I've been looking into lately</p>
-			<ul>
-				<li>tRPC</li>
-				<li>Zod</li>
-				<li>Zodios</li>
-				<li>Mantine</li>
-			</ul>
-		</main>
-		<Footer />
-	</body>
+
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+
+<body>
+	<Header title={SITE_TITLE} />
+	<main class="prose">
+		<p>
+			Hi! I'm Brenden, a fullstack web developer.
+			<br />
+			I love creating websites and playing with the latest web frameworks and libraries.
+		</p>
+		<p>Here are some of my favorites technologies:</p>
+		<ul class="grid grid-cols-3">
+			<li>Typescript</li>
+			<li>React</li>
+			<li>TailwindCSS</li>
+			<li>NextJS</li>
+			<li>Astro</li>
+			<li>React-Query</li>
+		</ul>
+		<p>Here are some cool things I've been looking into lately</p>
+		<ul>
+			<li>tRPC</li>
+			<li>Zod</li>
+			<li>Zodios</li>
+			<li>Mantine</li>
+		</ul>
+	</main>
+	<Footer />
+</body>
+
 </html>

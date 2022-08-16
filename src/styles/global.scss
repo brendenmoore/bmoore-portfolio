@@ -1,7 +1,7 @@
 body {
-	@apply max-w-2xl mx-auto min-h-screen
+	@apply max-w-2xl mx-auto min-h-screen p-3 relative pb-14
 }
 
 a {
-	@apply text-cyan-600
+	@apply text-sky-600
 }
