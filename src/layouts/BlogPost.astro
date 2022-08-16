@@ -39,6 +39,7 @@ const {
 				<h1 class="mb-2">{title}</h1>
 				{pubDate && <time>{pubDate}</time>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+				{technologies && <h4>Technologies:</h4>}
 				{technologies?.map(technology => <li>{technology}</li>)}
 				<!-- <hr/> -->
 				<slot />

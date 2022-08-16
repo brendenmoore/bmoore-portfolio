@@ -3,6 +3,10 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+const projects = (await Astro.glob('./projects/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
 ---
 
 <!DOCTYPE html>
@@ -20,7 +24,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			<br />
 			I love creating websites and playing with the latest web frameworks and libraries.
 		</p>
-		<p>Here are some of my favorites technologies:</p>
+		<p>Here are some of my favorites technologies and libraries I've been looking into lately:</p>
 		<ul class="grid grid-cols-3">
 			<li>Typescript</li>
 			<li>React</li>
@@ -28,13 +32,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			<li>NextJS</li>
 			<li>Astro</li>
 			<li>React-Query</li>
-		</ul>
-		<p>Here are some cool things I've been looking into lately</p>
-		<ul>
 			<li>tRPC</li>
 			<li>Zod</li>
 			<li>Zodios</li>
 			<li>Mantine</li>
+		</ul>
+		<p>Check out some of my recent Projects:</p>
+		<ul>
+			{projects.map(project => (
+				<li>
+					<a href={project.url}>{project.frontmatter.title}</a>
+				</li>
+			))}
 		</ul>
 	</main>
 	<Footer />

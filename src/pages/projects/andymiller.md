@@ -2,14 +2,13 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Andy Miller - Client Project"
 description: "A personal website and blog custom designed and deployed for a client"
-pubDate: "Jul 08 2022"
-heroImage: "/placeholder-hero.jpg"
+pubDate: "April 2021"
+# heroImage: "/placeholder-hero.jpg"
 technologies: 
     - React
     - TailwindCSS
     - GatsbyJS
     - Sanity CMS
-    - NodeJS
     - Javascript
 ---
 
